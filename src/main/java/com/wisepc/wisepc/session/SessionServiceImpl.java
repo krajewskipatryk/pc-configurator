@@ -1,4 +1,4 @@
-package com.wisepc.wisepc.session.domain;
+package com.wisepc.wisepc.session;
 
 import com.wisepc.wisepc.session.model.Session;
 import lombok.RequiredArgsConstructor;
@@ -6,12 +6,13 @@ import lombok.RequiredArgsConstructor;
 import java.time.LocalDateTime;
 
 @RequiredArgsConstructor
-public class SessionServiceImpl extends SessionFactory implements SessionService {
+class SessionServiceImpl implements SessionService {
     private final SessionRepository sessionRepository;
+    private final SessionCreator sessionCreator = new SessionCreator();
 
     @Override
     public String createSession() {
-        Session session = buildSession();
+        Session session = sessionCreator.buildSession();
 
         sessionRepository.save(session);
 

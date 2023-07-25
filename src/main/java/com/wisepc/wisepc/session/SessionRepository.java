@@ -1,4 +1,4 @@
-package com.wisepc.wisepc.session.domain;
+package com.wisepc.wisepc.session;
 
 import com.wisepc.wisepc.session.model.Session;
 import org.springframework.data.jpa.repository.JpaRepository;

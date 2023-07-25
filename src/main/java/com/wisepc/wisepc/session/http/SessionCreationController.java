@@ -1,6 +1,6 @@
 package com.wisepc.wisepc.session.http;
 
-import com.wisepc.wisepc.session.domain.SessionService;
+import com.wisepc.wisepc.session.SessionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;

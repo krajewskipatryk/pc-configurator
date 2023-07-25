@@ -1,14 +1,12 @@
-package com.wisepc.wisepc.session.domain;
+package com.wisepc.wisepc.session;
 
 import com.wisepc.wisepc.session.model.Session;
-import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@RequiredArgsConstructor
-class SessionFactory {
-    protected Session buildSession() {
+class SessionCreator {
+    public Session buildSession() {
         Session session = new Session();
 
         session.setSessionToken(UUID.randomUUID().toString());
@@ -19,7 +17,7 @@ class SessionFactory {
         return session;
     }
 
-    protected Session updateExpirationDate(Session session) {
+    public Session updateExpirationDate(Session session) {
         if (session.getModifiedDate() != null) {
             session.setExpirationDate(session.getModifiedDate().plusDays(14));
         } else {

@@ -1,4 +1,4 @@
-package com.wisepc.wisepc.session.domain;
+package com.wisepc.wisepc.session;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,8 +10,8 @@ class SessionConfig {
         return new SessionServiceImpl(sessionRepository);
     }
 
-    @Bean
-    public SessionFactory sessionCreationService() {
-        return new SessionFactory();
-    }
+//    @Bean
+//    public SessionCreator sessionCreationService() {
+//        return new SessionCreator();
+//    }
 }

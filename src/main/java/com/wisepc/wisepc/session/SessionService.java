@@ -1,4 +1,4 @@
-package com.wisepc.wisepc.session.domain;
+package com.wisepc.wisepc.session;
 
 public interface SessionService {
     String createSession();
