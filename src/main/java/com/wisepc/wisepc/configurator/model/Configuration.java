@@ -1,12 +1,12 @@
 package com.wisepc.wisepc.configurator.model;
 
-import com.wisepc.wisepc.parts.model.Case;
-import com.wisepc.wisepc.parts.model.GraphicCard;
-import com.wisepc.wisepc.parts.model.HardDrive;
-import com.wisepc.wisepc.parts.model.Motherboard;
-import com.wisepc.wisepc.parts.model.PowerSupply;
-import com.wisepc.wisepc.parts.model.Processor;
-import com.wisepc.wisepc.parts.model.Ram;
+import com.wisepc.wisepc.model.parts.Case;
+import com.wisepc.wisepc.model.parts.GraphicCard;
+import com.wisepc.wisepc.model.parts.HardDrive;
+import com.wisepc.wisepc.model.parts.Motherboard;
+import com.wisepc.wisepc.model.parts.PowerSupply;
+import com.wisepc.wisepc.model.parts.Processor;
+import com.wisepc.wisepc.model.parts.Ram;
 
 import java.util.Set;
 

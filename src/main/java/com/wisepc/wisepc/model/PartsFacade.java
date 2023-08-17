@@ -1,4 +1,4 @@
-package com.wisepc.wisepc.parts;
+package com.wisepc.wisepc.model;
 
 public interface PartsFacade {
 }
