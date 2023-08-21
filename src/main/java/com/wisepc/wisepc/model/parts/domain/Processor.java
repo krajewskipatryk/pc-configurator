@@ -26,5 +26,5 @@ public class Processor extends PartEntity {
     private Double frequency;
 
     @Column(name = "cores")
-    private Long cores;
+    private Integer cores;
 }

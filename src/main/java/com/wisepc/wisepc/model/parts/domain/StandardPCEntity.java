@@ -1,8 +1,8 @@
 package com.wisepc.wisepc.model.parts.domain;
 
 import com.wisepc.wisepc.model.parts.constants.Currency;
-import com.wisepc.wisepc.model.producers.Brand;
-import com.wisepc.wisepc.model.producers.Model;
+import com.wisepc.wisepc.model.producer.domain.Brand;
+import com.wisepc.wisepc.model.producer.domain.Model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

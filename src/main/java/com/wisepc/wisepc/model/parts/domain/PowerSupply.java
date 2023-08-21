@@ -18,7 +18,7 @@ public class PowerSupply extends StandardPCEntity {
     private Long id;
 
     @Column(name = "power")
-    private int power;
+    private Integer power;
 
     @Column(name = "modularity")
     @Enumerated(EnumType.STRING)

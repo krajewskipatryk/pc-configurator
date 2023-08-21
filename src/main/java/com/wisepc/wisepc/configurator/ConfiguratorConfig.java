@@ -1,6 +1,6 @@
 package com.wisepc.wisepc.configurator;
 
-import com.wisepc.wisepc.model.parts.dao.PartDao;
+import com.wisepc.wisepc.model.parts.PartDao;
 import com.wisepc.wisepc.session.SessionService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

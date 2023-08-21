@@ -1,7 +1,12 @@
-package com.wisepc.wisepc.model.parts.dao;
+package com.wisepc.wisepc.model.parts;
 
+import com.wisepc.wisepc.model.parts.domain.Case;
 import com.wisepc.wisepc.model.parts.domain.GraphicCard;
-import com.wisepc.wisepc.model.parts.dto.*;
+import com.wisepc.wisepc.model.parts.domain.Motherboard;
+import com.wisepc.wisepc.model.parts.domain.Processor;
+import com.wisepc.wisepc.model.parts.domain.PowerSupply;
+import com.wisepc.wisepc.model.parts.domain.HardDrive;
+import com.wisepc.wisepc.model.parts.domain.Ram;
 import com.wisepc.wisepc.model.parts.mapper.GraphicCardMapper;
 import com.wisepc.wisepc.model.parts.request.*;
 import lombok.RequiredArgsConstructor;
@@ -24,7 +29,7 @@ class PartDaoImpl implements PartDao {
     }
 
     @Override
-    public CaseDto getCase(Long caseId) {
+    public Case getCase(Long caseId) {
         return null;
     }
 
@@ -34,18 +39,17 @@ class PartDaoImpl implements PartDao {
     }
 
     @Override
-    public ProcessorDto getProcessor(Long processorId) {
+    public Processor getProcessor(Long processorId) {
         return null;
     }
 
     @Override
     public void createGraphicCard(GraphicCardCreationRequest graphicCardRequest) {
-        GraphicCard graphicCard = graphicCardMapper.mapGraphicCardCreationRequestToEntity(graphicCardRequest);
-        graphicCardRepository.save(graphicCard);
+
     }
 
     @Override
-    public GraphicCardDto getGraphicCard(Long graphicCardId) {
+    public GraphicCard getGraphicCard(Long graphicCardId) {
         return null;
     }
 
@@ -55,7 +59,7 @@ class PartDaoImpl implements PartDao {
     }
 
     @Override
-    public MotherboardDto getMotherboard(Long motherboardId) {
+    public Motherboard getMotherboard(Long motherboardId) {
         return null;
     }
 
@@ -65,7 +69,7 @@ class PartDaoImpl implements PartDao {
     }
 
     @Override
-    public HardDriveDto getHardDrive(Long hardDriveId) {
+    public HardDrive getHardDrive(Long hardDriveId) {
         return null;
     }
 
@@ -75,7 +79,7 @@ class PartDaoImpl implements PartDao {
     }
 
     @Override
-    public PowerSupplyDto getPowerSupply(Long powerSupplyId) {
+    public PowerSupply getPowerSupply(Long powerSupplyId) {
         return null;
     }
 
@@ -85,7 +89,7 @@ class PartDaoImpl implements PartDao {
     }
 
     @Override
-    public RamDto getRam(Long ramId) {
+    public Ram getRam(Long ramId) {
         return null;
     }
 }

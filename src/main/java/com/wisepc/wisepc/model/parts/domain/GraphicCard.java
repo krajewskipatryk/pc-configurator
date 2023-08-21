@@ -1,6 +1,6 @@
 package com.wisepc.wisepc.model.parts.domain;
 
-import com.wisepc.wisepc.model.producers.Manufacturer;
+import com.wisepc.wisepc.model.producer.domain.Manufacturer;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

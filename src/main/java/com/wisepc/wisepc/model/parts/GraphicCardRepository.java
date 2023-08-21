@@ -1,4 +1,4 @@
-package com.wisepc.wisepc.model.parts.dao;
+package com.wisepc.wisepc.model.parts;
 
 import com.wisepc.wisepc.model.parts.domain.GraphicCard;
 import org.springframework.data.jpa.repository.JpaRepository;

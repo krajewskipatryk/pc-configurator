@@ -1,4 +1,4 @@
-package com.wisepc.wisepc.model.parts.dao;
+package com.wisepc.wisepc.model.parts;
 
 import com.wisepc.wisepc.model.parts.domain.Motherboard;
 import org.springframework.data.jpa.repository.JpaRepository;
