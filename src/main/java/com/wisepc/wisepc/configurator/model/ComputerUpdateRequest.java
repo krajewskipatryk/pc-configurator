@@ -1,6 +1,14 @@
 package com.wisepc.wisepc.configurator.model;
 
-public record ComputerUpdateRequest(
+import java.util.List;
 
+public record ComputerUpdateRequest(
+    Long processorId,
+    Long graphicCardId,
+    List<Long> hardDriveIds,
+    List<Long> ramIds,
+    Long caseId,
+    Long powerSupplyId,
+    Long motherboardId
 ) {
 }

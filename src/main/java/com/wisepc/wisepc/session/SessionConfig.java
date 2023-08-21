@@ -6,12 +6,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 class SessionConfig {
     @Bean
-    public SessionService sessionService(SessionRepository sessionRepository) {
-        return new SessionServiceImpl(sessionRepository);
+    public SessionService sessionService(SessionRepository sessionRepository, SessionCreator sessionCreator) {
+        return new SessionServiceImpl(sessionRepository, sessionCreator);
     }
 
-//    @Bean
-//    public SessionCreator sessionCreationService() {
-//        return new SessionCreator();
-//    }
+    @Bean
+    public SessionCreator sessionCreator() {
+        return new SessionCreator();
+    }
 }

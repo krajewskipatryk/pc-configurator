@@ -1,16 +1,24 @@
 package com.wisepc.wisepc.configurator;
 
+import com.wisepc.wisepc.model.parts.dao.PartDao;
+import com.wisepc.wisepc.session.SessionService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 class ConfiguratorConfig {
     @Bean
-    public ConfiguratorService configuratorService() {
-        return new ConfiguratorServiceImpl();
+    public ConfiguratorService configuratorService(SessionService sessionService) {
+        return new ConfiguratorServiceImpl(sessionService);
     }
 
-    public ConfiguratorMapper configuratorMapper() {
-        return new ConfiguratorMapper();
+    @Bean
+    public ConfiguratorMapper configuratorMapper(ConfiguratorRepository configuratorRepository, PartDao partDao) {
+        return new ConfiguratorMapper(configuratorRepository, partDao);
+    }
+
+    @Bean
+    public ConfiguratorBuilder configuratorBuilder(ConfiguratorRepository configuratorRepository) {
+        return new ConfiguratorBuilder(configuratorRepository);
     }
 }

@@ -22,14 +22,14 @@ class ConfiguratorController {
 
     @PostMapping(value = "/update-configuration")
     public @ResponseBody String updateConfiguration(
-            @RequestHeader(value = "sessionToken", required = true) String sessionToken,
-            @RequestBody ComputerUpdateRequest computerUpdateRequest) {
+                                @RequestHeader(value = "sessionToken", required = true) String sessionToken,
+                                @RequestBody ComputerUpdateRequest computerUpdateRequest) {
 
         try {
             if (sessionService.validateSession(sessionToken)) {
-                return configuratorService.updateComputerConfiguration(computerUpdateRequest);
+                return configuratorService.updateComputerConfiguration(sessionToken, computerUpdateRequest);
             } else {
-                // TODO: Replace with adequate Exception
+                // TODO: Replace with SessionTokenExpiredException/NoDataFoundException/SessionValidationFailedException
                 throw new RuntimeException("Session token failed validation");
             }
         } catch (RuntimeException e) {

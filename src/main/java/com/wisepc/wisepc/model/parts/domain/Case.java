@@ -1,6 +1,4 @@
-package com.wisepc.wisepc.model.parts;
-
-import com.wisepc.wisepc.model.producers.Brand;
+package com.wisepc.wisepc.model.parts.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -17,14 +15,19 @@ import lombok.Setter;
 @Builder
 @Entity
 @Table(name = "case")
-public class Case {
+public class Case extends StandardPCEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "brand")
-    private Brand brand;
+    @Column(name = "width")
+    private Long width;
 
+    @Column(name = "length")
+    private Long length;
 
+    @Column(name = "height")
+    private Long height;
 }

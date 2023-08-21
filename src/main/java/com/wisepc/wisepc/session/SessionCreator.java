@@ -10,7 +10,7 @@ class SessionCreator {
         Session session = new Session();
 
         session.setSessionToken(UUID.randomUUID().toString());
-        session.setDeleted(false);
+        session.setExpired(false);
         session.setCreatedDate(LocalDateTime.now());
         session = updateExpirationDate(session);
 
