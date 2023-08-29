@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 class PartDaoConfiguration {
 
     @Bean
-    public PartDao partDao(
+    public PartQueryDao partQueryDao(
             CaseRepository caseRepository,
             GraphicCardRepository graphicCardRepository,
             ProcessorRepository processorRepository,
@@ -18,6 +18,28 @@ class PartDaoConfiguration {
             HardDriveRepositiory hardDriveRepositiory,
             GraphicCardMapper graphicCardMapper
             ) {
+        return new PartDaoImpl(
+                caseRepository,
+                graphicCardRepository,
+                processorRepository,
+                hardDriveRepositiory,
+                motherboardRepository,
+                ramRepository,
+                powerSupplyRepository,
+                graphicCardMapper);
+    }
+
+    @Bean
+    public PartCreationDao partCreationDao(
+            CaseRepository caseRepository,
+            GraphicCardRepository graphicCardRepository,
+            ProcessorRepository processorRepository,
+            RamRepository ramRepository,
+            PowerSupplyRepository powerSupplyRepository,
+            MotherboardRepository motherboardRepository,
+            HardDriveRepositiory hardDriveRepositiory,
+            GraphicCardMapper graphicCardMapper
+    ) {
         return new PartDaoImpl(
                 caseRepository,
                 graphicCardRepository,

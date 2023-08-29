@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Repository
 interface SessionRepository extends JpaRepository<Session, Long> {
-    Optional<Session> findSessionBySessionToken(String sessionToken);
+    Optional<Session> findBySessionToken(String sessionToken);
     Optional<Configuration> findConfigurationBySessionToken(String sessionToken);
 }
 

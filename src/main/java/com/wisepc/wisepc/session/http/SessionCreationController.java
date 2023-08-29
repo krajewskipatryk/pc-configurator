@@ -1,6 +1,8 @@
 package com.wisepc.wisepc.session.http;
 
 import com.wisepc.wisepc.session.SessionService;
+import com.wisepc.wisepc.session.model.Session;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +17,8 @@ class SessionCreationController {
 
     @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE)
     public String createSession() {
-        return sessionService.createSession();
+        Session newSession = sessionService.createSession();
+
+        return newSession.getSessionToken();
     }
 }

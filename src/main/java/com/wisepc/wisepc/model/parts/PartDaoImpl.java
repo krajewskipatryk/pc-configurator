@@ -12,7 +12,7 @@ import com.wisepc.wisepc.model.parts.request.*;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-class PartDaoImpl implements PartDao {
+class PartDaoImpl implements PartQueryDao, PartCreationDao {
 
     private final CaseRepository caseRepository;
     private final GraphicCardRepository graphicCardRepository;

@@ -19,7 +19,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "graphic_card")
 @NoArgsConstructor
-public class GraphicCard extends MemorizedEntity {
+public class GraphicCard extends AbstractMemoryContainingEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")

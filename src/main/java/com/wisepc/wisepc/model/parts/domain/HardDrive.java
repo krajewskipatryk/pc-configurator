@@ -11,7 +11,7 @@ import lombok.Setter;
 @Builder
 @Entity
 @Table(name = "hard_drive")
-public class HardDrive extends MemorizedEntity {
+public class HardDrive extends AbstractMemoryContainingEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

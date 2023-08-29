@@ -1,13 +1,14 @@
 package com.wisepc.wisepc.session;
 
 import com.wisepc.wisepc.configurator.model.Configuration;
+import com.wisepc.wisepc.session.model.Session;
 
 /**
  * TODO: Create refreshSession method
  */
 public interface SessionService {
-    String createSession();
-    Boolean validateSession(String sessionToken);
+    Session createSession();
+    Boolean validateSessionExist(String sessionToken);
     Configuration getConfigurationBySessionToken(String sessionToken);
 
 }

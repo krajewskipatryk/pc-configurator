@@ -1,6 +1,7 @@
-package com.wisepc.wisepc.model.http;
+package com.wisepc.wisepc.model.parts;
 
-import com.wisepc.wisepc.model.parts.PartDao;
+import com.wisepc.wisepc.model.parts.PartCreationDao;
+import com.wisepc.wisepc.model.parts.PartQueryDao;
 import com.wisepc.wisepc.model.parts.request.GraphicCardCreationRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -13,11 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/part/gpu")
 class GraphicCardController {
-    private final PartDao partDao;
+    private final PartQueryDao partQueryDao;
+    private final PartCreationDao partCreationDao;
 
     @PostMapping(value = "/create-graphic-card", consumes = MediaType.APPLICATION_JSON_VALUE)
     GraphicCardCreationRequest createGraphicCard(@RequestBody GraphicCardCreationRequest graphicCardCreationRequest) {
-//        partDao.createGraphicCard(graphicCardCreationRequest);
-        return graphicCardCreationRequest;
+        partCreationDao.createGraphicCard(graphicCardCreationRequest);
     }
 }

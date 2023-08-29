@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @MappedSuperclass
-abstract class MemorizedEntity extends PartEntity {
+abstract class AbstractMemoryContainingEntity extends AbstractPartEntity {
     @Column(name = "memory_size")
     protected int size;
 

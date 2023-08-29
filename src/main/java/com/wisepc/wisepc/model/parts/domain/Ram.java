@@ -10,7 +10,7 @@ import lombok.Setter;
 @Builder
 @Entity
 @Table(name = "ram_memory")
-public class Ram extends MemorizedEntity {
+public class Ram extends AbstractMemoryContainingEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")

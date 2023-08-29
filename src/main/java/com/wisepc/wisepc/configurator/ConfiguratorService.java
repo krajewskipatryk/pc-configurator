@@ -1,7 +1,7 @@
 package com.wisepc.wisepc.configurator;
 
-import com.wisepc.wisepc.configurator.model.ComputerUpdateRequest;
+import com.wisepc.wisepc.configurator.model.ConfiguratorUpdateRequest;
 
 public interface ConfiguratorService {
-    String updateComputerConfiguration(String sessionToken, ComputerUpdateRequest computerUpdateRequest);
+    void updateOrCreateSession(String sessionToken, ConfiguratorUpdateRequest configuratorUpdateRequest);
 }

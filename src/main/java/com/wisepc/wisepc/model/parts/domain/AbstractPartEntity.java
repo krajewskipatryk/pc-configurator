@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @MappedSuperclass
-abstract class PartEntity extends StandardPCEntity {
+abstract class AbstractPartEntity extends StandardPCEntity {
     @Column(name = "tdp")
     protected int tdp;
 }

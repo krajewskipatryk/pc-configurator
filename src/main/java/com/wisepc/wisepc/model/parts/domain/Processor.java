@@ -10,7 +10,7 @@ import lombok.Setter;
 @Builder
 @Entity
 @Table(name = "processor")
-public class Processor extends PartEntity {
+public class Processor extends AbstractPartEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")

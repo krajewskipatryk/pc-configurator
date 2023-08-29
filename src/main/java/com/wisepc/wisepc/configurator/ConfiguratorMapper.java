@@ -1,16 +1,14 @@
 package com.wisepc.wisepc.configurator;
 
-import com.wisepc.wisepc.configurator.model.ComputerUpdateRequest;
-import com.wisepc.wisepc.configurator.model.ConfigurationDto;
-import com.wisepc.wisepc.model.parts.PartDao;
+import com.wisepc.wisepc.configurator.model.ConfiguratorUpdateRequest;
+import com.wisepc.wisepc.configurator.model.Configuration;
+
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 class ConfiguratorMapper {
-    private final ConfiguratorRepository configuratorRepository;
-    private final PartDao partDao;
-    
-    public ConfigurationDto mapComputerRequestToDto(ComputerUpdateRequest computerUpdateRequest) {
-        return null;
+
+    public Configuration mergeComputerRequestIntoEntity(Configuration configuration, ConfiguratorUpdateRequest configuratorUpdateRequest) {
+
     }
 }
