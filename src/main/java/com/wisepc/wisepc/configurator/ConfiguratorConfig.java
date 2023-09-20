@@ -1,5 +1,6 @@
 package com.wisepc.wisepc.configurator;
 
+import com.wisepc.wisepc.model.configurator.dao.ConfiguratorRepository;
 import com.wisepc.wisepc.session.SessionService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,12 +13,7 @@ class ConfiguratorConfig {
     }
 
     @Bean
-    public ConfiguratorMapper configuratorMapper() {
-        return new ConfiguratorMapper();
-    }
-
-    @Bean
-    public ConfiguratorUpdater configuratorUpdater(ConfiguratorMapper configuratorMapper) {
-        return new ConfiguratorUpdater(configuratorMapper);
+    public ConfiguratorUpdater configuratorUpdater(ConfiguratorMapper configuratorMapper, ConfiguratorRepository configuratorRepository) {
+        return new ConfiguratorUpdater(configuratorMapper, configuratorRepository);
     }
 }

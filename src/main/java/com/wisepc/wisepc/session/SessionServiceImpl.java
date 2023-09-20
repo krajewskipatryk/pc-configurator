@@ -1,7 +1,8 @@
 package com.wisepc.wisepc.session;
 
-import com.wisepc.wisepc.configurator.model.Configuration;
-import com.wisepc.wisepc.session.model.Session;
+import com.wisepc.wisepc.model.configurator.domain.Configuration;
+import com.wisepc.wisepc.model.session.dao.SessionRepository;
+import com.wisepc.wisepc.model.session.domain.Session;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

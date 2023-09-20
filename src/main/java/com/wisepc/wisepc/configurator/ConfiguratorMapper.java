@@ -1,14 +1,15 @@
 package com.wisepc.wisepc.configurator;
 
-import com.wisepc.wisepc.configurator.model.ConfiguratorUpdateRequest;
-import com.wisepc.wisepc.configurator.model.Configuration;
+import com.wisepc.wisepc.configurator.dto.ConfiguratorUpdateRequest;
+import com.wisepc.wisepc.model.configurator.domain.Configuration;
 
 import lombok.RequiredArgsConstructor;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 
-@RequiredArgsConstructor
-class ConfiguratorMapper {
+@Mapper
+public interface ConfiguratorMapper {
+    ConfiguratorMapper instance = Mappers.getMapper(ConfiguratorMapper.class);
 
-    public Configuration mergeComputerRequestIntoEntity(Configuration configuration, ConfiguratorUpdateRequest configuratorUpdateRequest) {
-
-    }
+    Configuration mergeComputerRequestIntoEntity(ConfiguratorUpdateRequest configuratorUpdateRequest);
 }

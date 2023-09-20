@@ -1,14 +1,13 @@
 package com.wisepc.wisepc.session;
 
-import com.wisepc.wisepc.session.model.Session;
+import com.wisepc.wisepc.model.session.domain.Session;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 class SessionCreator {
-    Session session;
     public Session buildSession() {
-        session = new Session();
+        Session session = new Session();
 
         session.setSessionToken(UUID.randomUUID().toString());
         session.setExpired(false);

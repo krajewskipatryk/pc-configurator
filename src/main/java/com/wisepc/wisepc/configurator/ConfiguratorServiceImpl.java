@@ -1,11 +1,10 @@
 package com.wisepc.wisepc.configurator;
 
-import com.wisepc.wisepc.configurator.model.Configuration;
-import com.wisepc.wisepc.configurator.model.ConfiguratorUpdateRequest;
+import com.wisepc.wisepc.model.configurator.domain.Configuration;
+import com.wisepc.wisepc.configurator.dto.ConfiguratorUpdateRequest;
 import com.wisepc.wisepc.session.SessionService;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.dao.EmptyResultDataAccessException;
 
 @RequiredArgsConstructor
 class ConfiguratorServiceImpl implements ConfiguratorService {

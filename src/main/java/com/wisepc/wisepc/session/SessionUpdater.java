@@ -1,10 +1,10 @@
 package com.wisepc.wisepc.session;
 
-import com.wisepc.wisepc.session.model.Session;
+import com.wisepc.wisepc.model.session.domain.Session;
 
 import java.time.LocalDateTime;
 
-public class SessionUpdater {
+class SessionUpdater {
     public Session updateExpirationDate(Session session) {
         if (session.getModifiedDate() != null) {
             session.setExpirationDate(session.getModifiedDate().plusDays(14));

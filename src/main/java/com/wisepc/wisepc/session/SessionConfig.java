@@ -1,5 +1,6 @@
 package com.wisepc.wisepc.session;
 
+import com.wisepc.wisepc.model.session.dao.SessionRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

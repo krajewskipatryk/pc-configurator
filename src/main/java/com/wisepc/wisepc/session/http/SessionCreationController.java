@@ -1,7 +1,7 @@
 package com.wisepc.wisepc.session.http;
 
 import com.wisepc.wisepc.session.SessionService;
-import com.wisepc.wisepc.session.model.Session;
+import com.wisepc.wisepc.model.session.domain.Session;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
